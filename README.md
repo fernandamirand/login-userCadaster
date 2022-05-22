@@ -5,8 +5,8 @@ O objetivo desta aplicação é uma interação visual com a API de cadastro de 
 
 ## NESSE PROJETO, FOI UTILIZADO:
 
-- ReactJS
-- Yup
-- Styled-components
+- ReactJS 
+- Yup (para que fosse feita a validação de dados)
+- Styled-components (para a estilização da página)
 
 
