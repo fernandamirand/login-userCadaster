@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import * as yup from 'yup'
 import api from '../../services/api';
 import Register from '../Register';
-import { ButtonLogin, Container, Content, CreateAccount, Forms, InputPassword, InputUser, RecadoError, RecadoSucess, Title } from './styles';
+import { ButtonLogin, Container, Content, CreateAccount, CreateAccountClick, Forms, InputPassword, InputUser, RecadoError, RecadoSucess, Title } from './styles';
 
 function Login() {
     const [user, setUser] = useState({
@@ -48,8 +48,9 @@ function Login() {
         .catch((err) => {
             setStatus({
                 type: 'error',
-                mensagem: 'Usuario nao cadastrado. Faca o cadastro para prosseguir.'
+                mensagem: 'Email ou senha incorretos. Tente novamente.'
             });
+
         });
     }
 
@@ -58,6 +59,7 @@ function Login() {
             password: yup.string("Erro: Necessário preencher o campo senha!")
             .required("Erro: Necessário preencher o campo senha!")
             .min(6,"Erro: A senha deve ter no mínimo 6 caracteres!"),
+            
 
             email: yup.string("Erro: Necessário preencher o campo e-mail!")
             .required("Erro: Necessário preencher o campo email!")
@@ -103,7 +105,8 @@ function Login() {
                 defaultValue={user.password}   />
 
                 <ButtonLogin type='submit'>Entrar</ButtonLogin>
-                <CreateAccount href='#' onClick={()=>setRegister(true)}>Não tenho cadastro</CreateAccount>
+                <CreateAccount href='#' onClick={()=>setRegister(true)}>Não tem cadastro?</CreateAccount>
+                <CreateAccountClick href='#' onClick={()=>setRegister(true)}>Clique aqui</CreateAccountClick>
             </Forms>
             </>)
         }

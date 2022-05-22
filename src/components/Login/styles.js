@@ -16,7 +16,7 @@ background-color: #090b13;
 height: 370px;
 width: 350px ;
 border-radius: 4%;
-box-shadow: 10px 5px 5px black;
+box-shadow: 10px 5px 15px 5px rgba(0, 0, 0, 0.8);
 `
 export const Title = styled.h1`
 margin-top: 5px;
@@ -75,6 +75,13 @@ export const CreateAccount = styled.a`
  margin-top: 20px ;
  color: white;
  text-decoration: none;
+
+`
+
+export const CreateAccountClick = styled.a`
+ color: white;
+ text-decoration: none;
+
 `
 
 export const RecadoSucess = styled.p`
