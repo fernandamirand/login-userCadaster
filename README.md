@@ -1,6 +1,6 @@
 # LOGIN AND REGISTRATION SCREEN
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O objetivo desta aplicação é uma interação visual com a API de cadastro de usuário e login.
 
 ## Available Scripts
 
